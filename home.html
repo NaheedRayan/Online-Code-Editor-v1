@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACE in Action</title>
+    <link rel='stylesheet' type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=B612">
+
+    <!-- <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style> -->
+
+</head>
+
+<body>
+
+
+
+    <!-- <div id="editorbox" type="text"></div> -->
+
+    <div class="box">
+
+        <div class="box-area">
+            <div class="leftbox">
+                <div class="leftpart1"></div>
+                <div class="leftpart2">
+                    <div class="editor" id="editor" type="text">Welcome to the editor
+                    </div>
+                </div>
+                <div class="leftpart3">
+                    <span class="hide_stdin">Hide stdin</span>
+
+                    <select class="language">
+                        <option value="0">Select Language</option>
+                        <option value="1">CPP</option>
+                        <option value="2">C</option>
+                        <option value="3">Python</option>
+                        <option value="4">Ford   fdsfsdfdsf fsdfafdsfsdfafsafd</option>
+                        <option value="5">Honda</option>
+                        <option value="6">Jaguar</option>
+                        <option value="7">Land Rover</option>
+                        <option value="8">Mercedes</option>
+                        <option value="9">Mini</option>
+                        <option value="10">Nissan</option>
+                        <option value="11">Toyota</option>
+                        <option value="12">Volvo</option>
+                    </select>
+
+                    <span class="load">load</span>
+                    <span class="setting">setting</span>
+                    <span class="run_button">RUN</span>
+                </div>
+                <div class="leftpart4">
+                    <div class="stdin" id='stdin' type="text"></div>
+                </div>
+            </div>
+            <div class="rightbox"></div>
+        </div>
+        <div class="banner">Powered By Team Scarlet .</div>
+
+
+
+
+    </div>
+    <!-- 
+    <div class="grid">
+
+
+        <div class="editor" id="editor" type="text">function foo(items) {
+            var x = "All this is syntax highlighted";
+            return x;
+            }
+        </div>
+        <div class="stdin">This is for stdin</div>
+        <div class="stdout">This is for stdout</div>
+
+
+
+    </div> -->
+
+    <!-- <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script> -->
+    <!-- <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ext-language_tools.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="js/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/ace-builds/src-min-noconflict/theme-dracula.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/ace-builds/src-min-noconflict/ext-language_tools.js" type="text/javascript" charset="utf-8">
+    </script>
+
+    <script>
+        ace.require("ace/ext/language_tools");
+
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/dracula");
+        editor.getSession().setMode("ace/mode/c_cpp");
+
+        editor.setOptions({
+            enableBasicAutocompletion: true,
+            // enableSnippets: true,
+            // enableLiveAutocompletion: false
+        });
+
+        document.getElementById('editor').style.fontSize = '16px';
+
+        var editor2 = ace.edit("stdin");
+        editor2.setTheme("ace/theme/github");
+        editor2.getSession().setMode("ace/mode/c_cpp");
+
+        editor2.setOptions({
+            enableBasicAutocompletion: true,
+            // enableSnippets: true,
+            // enableLiveAutocompletion: false
+        });
+
+        document.getElementById('stdin').style.fontSize = '16px';
+    </script>
+
+    <!-- <script>
+        const BORDER_SIZE = 4;
+        const panel = document.getElementById("editor");
+
+        let m_pos;
+
+        function resize(e) {
+            const dx = m_pos - e.x;
+            m_pos = e.x;
+            panel.style.width = (parseInt(getComputedStyle(panel, '').width) + dx) + "px";
+        }
+
+        panel.addEventListener("mousedown", function (e) {
+            if (e.offsetX < BORDER_SIZE) {
+                m_pos = e.x;
+                document.addEventListener("mousemove", resize, false);
+            }
+        }, false);
+
+        document.addEventListener("mouseup", function () {
+            document.removeEventListener("mousemove", resize, false);
+        }, false);
+    </script> -->
+</body>
+
+</html>

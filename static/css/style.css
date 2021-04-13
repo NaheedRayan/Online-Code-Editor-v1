@@ -1,0 +1,171 @@
+:root {
+    font-size: 16px;
+    font-family: "B612", serif;
+
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --primary-accent: #08A080;
+    --secondary-accent: #88D0C0;
+
+
+    --orange-primary: #fd812e;
+    --orange-secondary: #FFCC00;
+
+
+    --chatui: #d5f1f1;
+
+}
+
+
+.box {
+    background-color: #b6b6b6;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+    /* border-radius: 15px; */
+
+}
+
+.box-area {
+    height: 97%;
+    width: 100%;
+    background-color: aquamarine;
+
+    display: flex;
+
+}
+
+/* the left part */
+
+.leftbox {
+
+    background-color: #fd812e;
+    width: 50%;
+    height: 100%;
+}
+
+.leftpart1 {
+    height: 5%;
+    width: 100%;
+    background-color: red;
+}
+
+.leftpart2 {
+    height: 70%;
+    width: 100%;
+    background-color: purple;
+
+
+}
+
+.leftpart3 {
+    height: 5%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.leftpart4 {
+
+    height: 20%;
+    width: 100%;
+    background-color: palevioletred;
+    /* border: 1px solid; */
+    /* overflow:auto; */
+
+}
+
+.stdin {
+
+    height: 100%;
+    width: 100%;
+
+}
+
+.hide_stdin{
+    border: 1px solid;
+    border-radius: 5px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 5px;
+}
+.language{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    border: 1px solid;
+    border-radius: 5px 0px 0px 5px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: auto;
+
+}
+
+.load{
+    border: 1px solid;
+    
+    padding-bottom: 3px;
+    padding-top: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+
+}
+
+.setting{
+    border: 1px solid;
+    
+    padding-bottom: 3px;
+    padding-top: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+.run_button{
+    border: 1px solid;
+    border-radius: 0px  5px  5px  0px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+    margin-right: 5px;
+}
+
+
+
+
+/* for the right part */
+.rightbox {
+    background-color: #FFCC00;
+
+    width: 50%;
+    height: 100%;
+}
+
+
+
+.editor {
+    width: 100%;
+    height: 100%;
+}
+
+/* the bottom banner */
+.banner {
+    background-color: aqua;
+    height: 3%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+}
