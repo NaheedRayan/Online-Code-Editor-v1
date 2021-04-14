@@ -9,68 +9,59 @@
     <link rel='stylesheet' type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=B612">
 
-    <!-- <style type="text/css" media="screen">
-        #editor {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-    </style> -->
 
 </head>
 
 <body>
 
-
-
-    <!-- <div id="editorbox" type="text"></div> -->
-
     <div class="box">
+        <div class="box_options">
 
+            <div class="filename">code.py</div>
+            <div class="min_max_button">+</div>
+            <div class="about">?</div>
+        </div>
         <div class="box-area">
-            <div class="leftbox">
-                <div class="leftpart1"></div>
-                <div class="leftpart2">
-                    <div class="editor" id="editor" type="text">Welcome to the editor
-                    </div>
-                </div>
-                <div class="leftpart3">
-                    <span class="hide_stdin">Hide stdin</span>
 
-                    <select class="language">
-                        <option value="0">Select Language</option>
-                        <option value="1">CPP</option>
-                        <option value="2">C</option>
-                        <option value="3">Python</option>
-                        <option value="4">Ford   fdsfsdfdsf fsdfafdsfsdfafsafd</option>
-                        <option value="5">Honda</option>
-                        <option value="6">Jaguar</option>
-                        <option value="7">Land Rover</option>
-                        <option value="8">Mercedes</option>
-                        <option value="9">Mini</option>
-                        <option value="10">Nissan</option>
-                        <option value="11">Toyota</option>
-                        <option value="12">Volvo</option>
-                    </select>
+            <div class="editor" id="editor"></div>
+            <div class="options_menu">
+                <span class="hide_stdin">Hide stdin</span>
 
-                    <span class="load">load</span>
-                    <span class="setting">setting</span>
-                    <span class="run_button">RUN</span>
-                </div>
-                <div class="leftpart4">
-                    <div class="stdin" id='stdin' type="text"></div>
-                </div>
+                <select class="language">
+                    <option value="0">Select Language</option>
+                    <option value="1">CPP</option>
+                    <option value="2">C</option>
+                    <option value="3">Python2</option>
+                    <option value="4">Java</option>
+                    <option value="5">JavaScript</option>
+                    <option value="6">Ruby</option>
+                </select>
+
+                <span class="load">Load</span>
+                <span class="setting">Setting</span>
+                <span class="run_button">RUN</span>
             </div>
-            <div class="rightbox"></div>
+
+            <div class="stdin_area" id="stdin_area"></div>
+            <div class="stdout_area">
+                <div class="right_topbar">
+                    <div class="time">2021-04-20 12:30</div>
+                    <div class="language_info">Python3</div>
+                    <div class="status">Success</div>
+                </div>
+
+                <div class="output" contenteditable="true" spellcheck="false"></div>
+                <div class="right_bottombar"></div>
+                
+
+            </div>
         </div>
         <div class="banner">Powered By Team Scarlet .</div>
 
-
-
-
     </div>
+
+    
+
     <!-- 
     <div class="grid">
 
@@ -98,7 +89,7 @@
         ace.require("ace/ext/language_tools");
 
         var editor = ace.edit("editor");
-        editor.setTheme("ace/theme/dracula");
+        editor.setTheme("ace/theme/github");
         editor.getSession().setMode("ace/mode/c_cpp");
 
         editor.setOptions({
@@ -109,7 +100,7 @@
 
         document.getElementById('editor').style.fontSize = '16px';
 
-        var editor2 = ace.edit("stdin");
+        var editor2 = ace.edit("stdin_area");
         editor2.setTheme("ace/theme/github");
         editor2.getSession().setMode("ace/mode/c_cpp");
 
@@ -119,7 +110,7 @@
             // enableLiveAutocompletion: false
         });
 
-        document.getElementById('stdin').style.fontSize = '16px';
+        document.getElementById('stdin_area').style.fontSize = '16px';
     </script>
 
     <!-- <script>
