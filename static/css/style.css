@@ -140,6 +140,31 @@
 
 }
 
+
+.line1{
+    position: absolute;
+    background-color:red;
+    top:70%;
+    width: 50%;
+    height:3px;
+    cursor: ns-resize;
+    z-index: 6;
+
+}
+
+
+.line2{
+    position: absolute;
+    background-color:red;
+    top:0;
+    right:50%;
+    width: 3px;
+    height:100%;
+    cursor: ew-resize;
+    z-index: 6;
+
+}
+
 .options_menu {
 
     position: absolute;
@@ -158,6 +183,9 @@
     box-sizing: border-box;
     border: 1px solid rgb(196, 194, 194);
     /* border-bottom: 2px solid rgb(196, 194, 194); */
+
+    /* cursor: ns-resize; */
+    /* z-index: 3; */
 
     
 
@@ -186,6 +214,9 @@
     top: 0;
     right: 0;
     background-color: rgb(160, 97, 15);
+
+
+
 
 
 }

@@ -21,10 +21,12 @@
             <div class="min_max_button">+</div>
             <div class="about">?</div>
         </div>
-        <div class="box-area">
+        <div class="box-area" id="box-area">
+
 
             <div class="editor" id="editor"></div>
-            <div class="options_menu">
+            <div class="line1" id="line1"></div>
+            <div class="options_menu" id="options_menu">
                 <span class="hide_stdin">Hide stdin</span>
 
                 <select class="language">
@@ -37,12 +39,14 @@
                     <option value="6">Ruby</option>
                 </select>
 
-                <span class="load">Load</span>
+                <span class="load" >Load</span>
                 <span class="setting">Setting</span>
                 <span class="run_button">RUN</span>
             </div>
 
             <div class="stdin_area" id="stdin_area"></div>
+            <div class="line2" id="line2"></div>
+
             <div class="stdout_area">
                 <div class="right_topbar">
                     <div class="time">2021-04-20 12:30</div>
@@ -136,6 +140,10 @@
             document.removeEventListener("mousemove", resize, false);
         }, false);
     </script> -->
+
+
+    <script src="js/line1_resize.js" type="text/javascript" charset="utf-8"></script>
+    
 </body>
 
 </html>
