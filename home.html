@@ -117,32 +117,9 @@
         document.getElementById('stdin_area').style.fontSize = '16px';
     </script>
 
-    <!-- <script>
-        const BORDER_SIZE = 4;
-        const panel = document.getElementById("editor");
 
-        let m_pos;
-
-        function resize(e) {
-            const dx = m_pos - e.x;
-            m_pos = e.x;
-            panel.style.width = (parseInt(getComputedStyle(panel, '').width) + dx) + "px";
-        }
-
-        panel.addEventListener("mousedown", function (e) {
-            if (e.offsetX < BORDER_SIZE) {
-                m_pos = e.x;
-                document.addEventListener("mousemove", resize, false);
-            }
-        }, false);
-
-        document.addEventListener("mouseup", function () {
-            document.removeEventListener("mousemove", resize, false);
-        }, false);
-    </script> -->
-
-
-    <script src="js/line1_resize.js" type="text/javascript" charset="utf-8"></script>
+    <!-- for resizing the divs -->
+    <script src="js/line_resizer.js" type="text/javascript" charset="utf-8"></script>
     
 </body>
 
