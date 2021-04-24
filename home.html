@@ -29,17 +29,17 @@
             <div class="options_menu" id="options_menu">
                 <span class="hide_stdin">Hide stdin</span>
 
-                <select class="language">
-                    <option value="0">Select Language</option>
-                    <option value="1">CPP</option>
-                    <option value="2">C</option>
-                    <option value="3">Python2</option>
-                    <option value="4">Java</option>
-                    <option value="5">JavaScript</option>
-                    <option value="6">Ruby</option>
+                <select class="language" onchange="change_language(event)">
+                    <option value="" disabled selected hidden>Select Language</option>
+                    <option value="cpp">C++</option>
+                    <option value="c">C</option>
+                    <option value="python3">Python3</option>
+                    <option value="openJDK-8">Java-8</option>
+                    <option value="javascript">JavaScript</option>
+
                 </select>
 
-                <span class="load" >Load</span>
+                <span class="load">Load</span>
                 <span class="setting">Setting</span>
                 <span class="run_button">RUN</span>
             </div>
@@ -56,7 +56,7 @@
 
                 <div class="output" contenteditable="true" spellcheck="false"></div>
                 <div class="right_bottombar"></div>
-                
+
 
             </div>
         </div>
@@ -64,23 +64,8 @@
 
     </div>
 
-    
-
-    <!-- 
-    <div class="grid">
 
 
-        <div class="editor" id="editor" type="text">function foo(items) {
-            var x = "All this is syntax highlighted";
-            return x;
-            }
-        </div>
-        <div class="stdin">This is for stdin</div>
-        <div class="stdout">This is for stdout</div>
-
-
-
-    </div> -->
 
     <!-- <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script> -->
     <!-- <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ext-language_tools.js" type="text/javascript" charset="utf-8"></script> -->
@@ -89,23 +74,26 @@
     <script src="js/ace-builds/src-min-noconflict/ext-language_tools.js" type="text/javascript" charset="utf-8">
     </script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script>
         ace.require("ace/ext/language_tools");
 
         var editor = ace.edit("editor");
-        editor.setTheme("ace/theme/github");
+        editor.setTheme("ace/theme/clouds");
         editor.getSession().setMode("ace/mode/c_cpp");
 
         editor.setOptions({
             enableBasicAutocompletion: true,
-            // enableSnippets: true,
-            // enableLiveAutocompletion: false
+            enableSnippets: true,
+            enableLiveAutocompletion: false
         });
 
         document.getElementById('editor').style.fontSize = '16px';
 
+        // ---------------------------------------------------------------------------------------------------------------------------------
         var editor2 = ace.edit("stdin_area");
-        editor2.setTheme("ace/theme/github");
+        editor2.setTheme("ace/theme/clouds");
         editor2.getSession().setMode("ace/mode/c_cpp");
 
         editor2.setOptions({
@@ -120,7 +108,8 @@
 
     <!-- for resizing the divs -->
     <script src="js/line_resizer.js" type="text/javascript" charset="utf-8"></script>
-    
+    <script src="js/run.js" type="text/javascript" charset="utf-8"></script>
+
 </body>
 
 </html>

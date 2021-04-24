@@ -18,6 +18,7 @@ var oldx = 0;
 var oldy = 0;
 
 var rounded_value = 0;
+var rounded_value2 = 0;
 
 // for getting the top value of line1 in percentage
 rounded_value = Math.round(getComputedStyle(line1).top.replace('px', '') / getComputedStyle(line1.parentElement).height.replace('px', '') * 100);

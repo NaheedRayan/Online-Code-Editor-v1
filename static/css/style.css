@@ -249,6 +249,8 @@
     padding-right: 8px;
     margin-left: 5px;
 
+    cursor: pointer;
+
 
 }
 
@@ -266,6 +268,9 @@
     padding-right: 8px;
     margin-left: auto;
 
+    cursor: pointer;
+
+
 }
 
 .load {
@@ -277,6 +282,9 @@
     padding-top: 3px;
     padding-left: 8px;
     padding-right: 8px;
+
+    cursor: pointer;
+
 
 
 }
@@ -291,6 +299,9 @@
     padding-left: 8px;
     padding-right: 8px;
 
+    cursor: pointer;
+
+
 }
 
 .run_button {
@@ -304,6 +315,9 @@
     padding-right: 8px;
 
     margin-right: 5px;
+
+    cursor: pointer;
+
 }
 
 
