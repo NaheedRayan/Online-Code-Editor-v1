@@ -51,7 +51,10 @@
                 <div class="right_topbar">
                     <div class="time"></div>
                     <div class="language_info"></div>
-                    <div class="status">Success</div>
+                    <div class="status">
+                        <div class="loader"></div>
+                        <div class="success"></div>
+                    </div>
                 </div>
 
                 <div class="output" contenteditable="true" spellcheck="false"></div>
@@ -99,8 +102,11 @@
        
 
         document.getElementById('stdin_area').style.fontSize = '16px';
+        $(".status").hide();
+    
     </script>
 
+    
 
     <!-- for resizing the divs -->
     <script src="js/line_resizer.js" type="text/javascript" charset="utf-8"></script>

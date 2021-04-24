@@ -32,6 +32,12 @@ function change_language(event) {
 document.querySelector(".run_button").addEventListener("click", (e) => {
     console.log("run button is clicked");
 
+    $(".loader").show();
+    $(".status").show();
+    $(".status").css("background-color", "rgb(139, 139, 139)")
+    $(".success").html("");
+
+
     var today = new Date();
     var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -94,9 +100,17 @@ function output_link(data_link) {
                     console.log(data);
                     clearInterval(myvar);
                     output.innerHTML = data.output;
+                    $(".success").html(data.status);
+                    $(".loader").hide();
+                    if(data.status == "Successful")
+                        $(".status").css("background-color", "rgb(119, 199, 0)");
+                    else
+                        $(".status").css("background-color", "rgb(235, 75, 75)");
+
                 } else if (data.status != "") {
                     // console.log(data);
-                    output.innerHTML = data.status;
+                    // output.innerHTML = data.status;
+                    $(".success").html(data.status);
                 } else {
                     clearInterval(myvar);
                     output.innerHTML = "Something went wrong";
