@@ -6,29 +6,42 @@ var ed2 = ace.edit("stdin_area");
 var output = document.querySelector(".output");
 
 var language = ""
+var lang = ""
 
-function change_language(event){
+function change_language(event) {
     console.log(event.target.value)
     
+    var e = document.querySelector(".language");
+    lang = e.options[e.selectedIndex].text; // get selected option text
+
     language = event.target.value;
-    if (language == "cpp" | language == "c")    
+    // lang = event.target.value;
+    if (language == "cpp" | language == "c")
         ed.getSession().setMode("ace/mode/c_cpp");
-    else if(language == "python3")
+    else if (language == "python3")
         ed.getSession().setMode("ace/mode/python");
-    else if(language == "openJDK")
+    else if (language == "openJDK")
         ed.getSession().setMode("ace/mode/java");
-    else if(language == "javascript")
+    else if (language == "javascript")
         ed.getSession().setMode("ace/mode/javascript");
 
 }
-
-
-
 
 // console.log(language)
 
 document.querySelector(".run_button").addEventListener("click", (e) => {
     console.log("run button is clicked");
+
+    var today = new Date();
+    var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date + ' ' + time;
+
+    $(".time").html(dateTime);
+    $(".language_info").html(lang);
+
+
+    console.log(dateTime);
 
     let code = ed.getValue();
     let input = ed2.getValue();
@@ -81,13 +94,15 @@ function output_link(data_link) {
                     console.log(data);
                     clearInterval(myvar);
                     output.innerHTML = data.output;
-                } else {
-
+                } else if (data.status != "") {
                     // console.log(data);
                     output.innerHTML = data.status;
+                } else {
+                    clearInterval(myvar);
+                    output.innerHTML = "Something went wrong";
                 }
-            })
 
+            })
     }, 1000)
 
 

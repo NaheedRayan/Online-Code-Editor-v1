@@ -350,6 +350,9 @@
 
     padding: 10px;
     overflow: auto;
+
+    /* for tab and newline */
+    white-space: pre-wrap;
 }
 
 .right_bottombar{
