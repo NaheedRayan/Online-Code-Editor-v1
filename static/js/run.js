@@ -10,7 +10,7 @@ var lang = ""
 
 function change_language(event) {
     console.log(event.target.value)
-    
+
     var e = document.querySelector(".language");
     lang = e.options[e.selectedIndex].text; // get selected option text
 
@@ -78,7 +78,17 @@ document.querySelector(".run_button").addEventListener("click", (e) => {
     }).then(data => {
         // console.log(data)
         output_link(data)
-    })
+    }).catch(function () {
+        console.log("error while connecting api server");
+
+        $(".success").html("Offline");
+        $(".loader").hide();
+       
+        $(".status").css("background-color", "rgb(235, 75, 75)");
+
+
+
+    });
 
 
 })
@@ -102,12 +112,12 @@ function output_link(data_link) {
                     output.innerHTML = data.output;
                     $(".success").html(data.status);
                     $(".loader").hide();
-                    if(data.status == "Successful")
+                    if (data.status == "Successful")
                         $(".status").css("background-color", "rgb(119, 199, 0)");
                     else
                         $(".status").css("background-color", "rgb(235, 75, 75)");
 
-                } else if (data.status != "") {
+                } else if (data.status) {
                     // console.log(data);
                     // output.innerHTML = data.status;
                     $(".success").html(data.status);
