@@ -16,15 +16,21 @@ function change_language(event) {
 
     language = event.target.value;
     // lang = event.target.value;
-    if (language == "cpp" | language == "c")
+    if (language == "cpp" | language == "c") {
         ed.getSession().setMode("ace/mode/c_cpp");
-    else if (language == "python3")
+        $(".filename").html("code.cpp");
+    } else if (language == "python3") {
         ed.getSession().setMode("ace/mode/python");
-    else if (language == "openJDK")
-        ed.getSession().setMode("ace/mode/java");
-    else if (language == "javascript")
-        ed.getSession().setMode("ace/mode/javascript");
+        $(".filename").html("code.py");
 
+    } else if (language == "openJDK") {
+        ed.getSession().setMode("ace/mode/java");
+        $(".filename").html("code.java");
+
+    } else if (language == "javascript") {
+        ed.getSession().setMode("ace/mode/javascript");
+        $(".filename").html("code.js");
+    }
 }
 
 // console.log(language)
@@ -83,7 +89,7 @@ document.querySelector(".run_button").addEventListener("click", (e) => {
 
         $(".success").html("Offline");
         $(".loader").hide();
-       
+
         $(".status").css("background-color", "rgb(235, 75, 75)");
 
 
@@ -127,7 +133,7 @@ function output_link(data_link) {
                 }
 
             })
-    }, 1000)
+    }, 500)
 
 
 

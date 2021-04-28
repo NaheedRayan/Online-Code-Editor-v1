@@ -17,7 +17,7 @@
     <div class="box">
         <div class="box_options">
 
-            <div class="filename">code.py</div>
+            <div class="filename">code</div>
             <div class="min_max_button">+</div>
             <div class="about">?</div>
         </div>
@@ -49,6 +49,7 @@
 
             <div class="stdout_area">
                 <div class="right_topbar">
+                    <div style="color:white; margin-left: 10px;margin-right:10px;">Terminal</div>
                     <div class="time"></div>
                     <div class="language_info"></div>
                     <div class="status">
@@ -83,8 +84,9 @@
         ace.require("ace/ext/language_tools");
 
         var editor = ace.edit("editor");
-        editor.setTheme("ace/theme/clouds");
+        editor.setTheme("ace/theme/monokai");
         editor.getSession().setMode("ace/mode/c_cpp");
+        editor.setShowPrintMargin(false);
 
         editor.setOptions({
             enableBasicAutocompletion: true,
@@ -96,10 +98,9 @@
 
         // ---------------------------------------------------------------------------------------------------------------------------------
         var editor2 = ace.edit("stdin_area");
-        editor2.setTheme("ace/theme/clouds");
+        editor2.setTheme("ace/theme/monokai");
         editor2.getSession().setMode("ace/mode/c_cpp");
-
-       
+        editor2.setShowPrintMargin(false);
 
         document.getElementById('stdin_area').style.fontSize = '16px';
         $(".status").hide();

@@ -2,25 +2,22 @@
     font-size: 16px;
     font-family: "B612", serif;
 
-    --text-primary: #b6b6b6;
+    --text-primary: #cccccc;
     --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
-    --primary-accent: #08A080;
-    --secondary-accent: #88D0C0;
 
 
-    --orange-primary: #fd812e;
-    --orange-secondary: #FFCC00;
 
-
-    --chatui: #d5f1f1;
+    --dracula: rgb(39, 40, 34);
+    --border-color: rgb(68, 68, 68);
 
 }
 
+body{
+    background-color: black;
+}
 
 .box {
-    background-color: #b6b6b6;
+    /* background-color: var(--dracula); */
 
     top: 25px;
     right: 25px;
@@ -33,7 +30,7 @@
 }
 
 .box_options {
-    background-color: white;
+    /* background-color: var(--dracula); */
     width: 100%;
     height: 5%;
 
@@ -44,7 +41,9 @@
 }
 
 .filename {
-    background-color: white;
+    background-color: var(--dracula);
+    color:white;
+
     height: 100%;
     width: auto;
     display: flex;
@@ -60,21 +59,22 @@
     z-index: 2;
 
 
-    border-left: 1px solid rgb(196, 194, 194);
-    border-right: 1px solid rgb(196, 194, 194);
-    border-top: 1px solid rgb(196, 194, 194);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
 
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
 
 
 }
 
 
 .min_max_button {
-    border: 1px solid rgb(196, 194, 194);
+    background-color:var(--dracula);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 
-    color: #5e5e5e;
+    color: var(--text-primary);
 
     height: 50%;
 
@@ -92,9 +92,11 @@
 }
 
 .about {
-    border: 1px solid rgb(196, 194, 194);
+    background-color:var(--dracula);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
-    color: #5e5e5e;
+    color: var(--text-primary);
+
 
     height: 50%;
 
@@ -131,10 +133,10 @@
     left: 0;
 
     box-sizing: border-box;
-    border-left: 1px solid rgb(196, 194, 194);
-    border-right: 1px solid rgb(196, 194, 194);
-    border-bottom: 1px solid rgb(196, 194, 194);
-    border-top: 1px solid rgb(196, 194, 194);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
 
 
 
@@ -143,7 +145,7 @@
 
 .line1 {
     position: absolute;
-    background-color: red;
+    background-color: var(--border-color);
     top: 70%;
     width: 50%;
     height: 3px;
@@ -155,7 +157,7 @@
 
 .line2 {
     position: absolute;
-    background-color: red;
+    background-color: var(--border-color);
     top: 0;
     right: 50%;
     width: 3px;
@@ -168,7 +170,7 @@
 .options_menu {
 
     position: absolute;
-    background-color: white;
+    background-color: var(--dracula);
 
 
     height: 5%;
@@ -181,8 +183,8 @@
     align-items: center;
 
     box-sizing: border-box;
-    border: 1px solid rgb(196, 194, 194);
-    /* border-bottom: 2px solid rgb(196, 194, 194); */
+    border: 1px solid var(--border-color);
+    /* border-bottom: 2px solid var(--border-color); */
 
     /* cursor: ns-resize; */
     /* z-index: 3; */
@@ -202,7 +204,7 @@
     /* background-color: burlywood; */
 
     box-sizing: border-box;
-    border: 1px solid rgb(196, 194, 194);
+    border: 1px solid var(--border-color);
 
 }
 
@@ -213,7 +215,7 @@
     height: 100%;
     top: 0;
     right: 0;
-    background-color: rgb(160, 97, 15);
+    /* background-color: rgb(160, 97, 15); */
 
 
 
@@ -224,7 +226,7 @@
 
 /* the bottom banner */
 .banner {
-    background-color: rgb(167, 217, 250);
+    background-color: var(--dracula);
     height: 3%;
     width: 100%;
     display: flex;
@@ -240,14 +242,18 @@
 
 
 .hide_stdin {
-    border: 1px solid rgb(196, 194, 194);
-    color: #5e5e5e;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+
+
+    font-size:12px;
+
     border-radius: 5px;
     padding-bottom: 3px;
     padding-top: 3px;
     padding-left: 8px;
     padding-right: 8px;
-    margin-left: 5px;
+    margin-left: 15px;
 
     cursor: pointer;
 
@@ -258,11 +264,15 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    border: 1px solid rgb(196, 194, 194);
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
     color: #5e5e5e;
 
+    font-size:12px;
+
+
     border-radius: 5px 0px 0px 5px;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
     padding-top: 3px;
     padding-left: 8px;
     padding-right: 8px;
@@ -274,9 +284,12 @@
 }
 
 .load {
-    border: 1px solid rgb(196, 194, 194);
-    color: #5e5e5e;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
 
+
+    font-size:12px;
 
     padding-bottom: 3px;
     padding-top: 3px;
@@ -290,9 +303,12 @@
 }
 
 .setting {
-    border: 1px solid rgb(196, 194, 194);
-    color: #5e5e5e;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
 
+
+    font-size:12px;
 
     padding-bottom: 3px;
     padding-top: 3px;
@@ -305,8 +321,13 @@
 }
 
 .run_button {
-    border: 1px solid rgb(196, 194, 194);
-    color: #5e5e5e;
+    box-sizing: border-box;
+    background-color:#3498db;
+    /* border: 1px solid var(--border-color); */
+    color: var(--text-primary);
+
+
+    font-size:12px;
 
     border-radius: 0px 5px 5px 0px;
     padding-bottom: 3px;
@@ -314,7 +335,7 @@
     padding-left: 8px;
     padding-right: 8px;
 
-    margin-right: 5px;
+    margin-right: 15px;
 
     cursor: pointer;
 
@@ -325,28 +346,30 @@
 
 .right_topbar {
 
-    background-color: white;
+    background-color: var(--dracula);
     height: 8%;
     width: 100%;
     display: flex;
     align-items: center;
 
     box-sizing: border-box;
-    border-bottom: 1px dashed rgb(196, 194, 194);
-    border-right: 1px solid rgb(196, 194, 194);
-    border-top: 1px solid rgb(196, 194, 194);
+    border-bottom: 1px dashed var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
 
 }
 
 .output {
-    background-color: white;
+    background-color: var(--dracula);
+    color: var(--text-primary);
+
     height: 87%;
     width: 100%;
 
     box-sizing: border-box;
-    border-bottom: 1px solid rgb(196, 194, 194);
-    border-left: 1px solid rgb(196, 194, 194);
-    border-right: 1px solid rgb(196, 194, 194);
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
 
     padding: 10px;
     overflow: auto;
@@ -356,13 +379,13 @@
 }
 
 .right_bottombar {
-    background-color: white;
+    background-color: var(--dracula);
     height: 5%;
     width: 100%;
     display: flex;
 
     box-sizing: border-box;
-    border: 1px solid rgb(196, 194, 194);
+    border: 1px solid var(--border-color);
 
 }
 
@@ -371,11 +394,15 @@
 
 .time {
     margin-left: 8px;
+    color: var(--text-primary);
+
 
 }
 
 .language_info {
     margin-left: auto;
+    color: var(--text-primary);
+
 }
 
 .status {
@@ -409,14 +436,13 @@
     border: 2px solid #f3f3f3;
     border-radius: 50%;
     border-top: 2px solid #3498db;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     -webkit-animation: spin 2s linear infinite;
     /* Safari */
     animation: spin 2s linear infinite;
 
-    margin-right: 5px;
-    margin-left: 5px;
+    margin: 3px;
 }
 
 /* Safari */
