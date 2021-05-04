@@ -30,7 +30,7 @@ body {
     position: fixed;
 }
 
-.box_options {
+.box .box_options {
     /* background-color: var(--dracula); */
     width: 100%;
     height: 5%;
@@ -129,7 +129,7 @@ body {
 }
 
 
-.min_max_button {
+.box .box_options .min_max_button {
     background-color: var(--dracula);
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -151,7 +151,7 @@ body {
 
 }
 
-.about {
+.box .box_options .about {
     background-color: var(--dracula);
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -175,7 +175,7 @@ body {
 }
 
 
-.box-area {
+.box .box-area {
     height: 93%;
     width: 100%;
     background-color: aquamarine;
@@ -184,7 +184,7 @@ body {
 
 }
 
-.editor {
+.box .box-area .editor {
 
     position: absolute;
     width: 50%;
@@ -200,7 +200,7 @@ body {
 }
 
 
-.line1 {
+.box .box-area .line1 {
     position: absolute;
     background-color: var(--border-color);
     top: 70%;
@@ -212,7 +212,7 @@ body {
 }
 
 
-.line2 {
+.box .box-area .line2 {
     position: absolute;
     background-color: var(--border-color);
     top: 0;
@@ -224,7 +224,7 @@ body {
 
 }
 
-.options_menu {
+.box .box-area .options_menu {
 
     position: absolute;
     background-color: var(--dracula);
@@ -248,7 +248,7 @@ body {
 }
 
 
-.stdin_area {
+.box .box-area .stdin_area {
 
     position: absolute;
     width: 50%;
@@ -262,7 +262,7 @@ body {
 
 }
 
-.stdout_area {
+.box .box-area .stdout_area {
 
     position: absolute;
     width: 50%;
@@ -274,7 +274,7 @@ body {
 
 
 /* the bottom banner */
-.banner {
+.box .banner {
 
     font-size:xx-small;
     color:white;
@@ -290,7 +290,7 @@ body {
     /* bottom: 0; */
 }
 
-.hide_stdin {
+.box .box-area .options_menu .hide_stdin {
     border: 1px solid var(--border-color);
     color: var(--text-primary);
 
@@ -309,7 +309,7 @@ body {
 
 }
 
-.language {
+.box .box-area .options_menu .language {
     -webkit-appearance: none;
     -moz-appearance: none;
 
@@ -332,7 +332,7 @@ body {
 
 }
 
-.load {
+.box .box-area .options_menu .load {
     box-sizing: border-box;
     border: 1px solid var(--border-color);
     color: var(--text-primary);
@@ -351,7 +351,7 @@ body {
 
 }
 
-.setting {
+.box .box-area .options_menu .setting {
     box-sizing: border-box;
     border: 1px solid var(--border-color);
     color: var(--text-primary);
@@ -369,7 +369,7 @@ body {
 
 }
 
-.run_button {
+.box .box-area .options_menu .run_button {
     box-sizing: border-box;
     background-color: #3498db;
     /* border: 1px solid var(--border-color); */
@@ -393,7 +393,7 @@ body {
 
 /* stdout elements */
 
-.right_topbar {
+.box .box-area .stdout_area .right_topbar {
 
     background-color: var(--dracula);
     height: 8%;
@@ -408,7 +408,7 @@ body {
 
 }
 
-.output {
+.box .box-area .stdout_area .output {
     background-color: var(--dracula);
     color: var(--text-primary);
 
@@ -429,7 +429,7 @@ body {
     white-space: pre-wrap;
 }
 
-.right_bottombar {
+.box .box-area .stdout_area .right_bottombar {
     background-color: var(--dracula);
     height: 5%;
     width: 100%;
@@ -443,20 +443,20 @@ body {
 
 
 
-.time {
+.box .box-area .stdout_area .right_topbar .time {
     margin-left: 8px;
     color: var(--text-primary);
 
 
 }
 
-.language_info {
+.box .box-area .stdout_area .right_topbar .language_info {
     margin-left: auto;
     color: var(--text-primary);
 
 }
 
-.status {
+.box .box-area .stdout_area .right_topbar .status {
     /* border: 1px solid rgb(42, 150, 0); */
     border: none;
 
@@ -483,7 +483,7 @@ body {
 
 }
 
-.loader {
+.box .box-area .stdout_area .right_topbar .status .loader {
     border: 2px solid #f3f3f3;
     border-radius: 50%;
     border-top: 2px solid #3498db;
@@ -536,7 +536,7 @@ body {
         position: fixed;
     }
 
-    .box_options {
+    .box .box_options {
         /* background-color: var(--dracula); */
         width: 100%;
         height: 5%;
@@ -633,7 +633,7 @@ body {
    
 
 
-    .min_max_button {
+.box .box_options .min_max_button {
         background-color: var(--dracula);
         border: 1px solid var(--border-color);
         border-radius: 5px;
@@ -655,7 +655,7 @@ body {
 
     }
 
-    .about {
+    .box .box_options .about {
         background-color: var(--dracula);
         border: 1px solid var(--border-color);
         border-radius: 5px;
@@ -679,7 +679,7 @@ body {
     }
 
 
-    .box-area {
+    .box .box-area {
         height: 93%;
         width: 100%;
         background-color: aquamarine;
@@ -688,7 +688,7 @@ body {
 
     }
 
-    .editor {
+    .box .box-area .editor {
 
         position: absolute;
         width: 100%;
@@ -707,7 +707,7 @@ body {
     }
 
 
-    .line1 {
+    .box .box-area .line1 {
 
         visibility: hidden;
 
@@ -722,7 +722,7 @@ body {
     }
 
 
-    .line2 {
+    .box .box-area .line2 {
 
         visibility: hidden;
 
@@ -737,7 +737,7 @@ body {
 
     }
 
-    .options_menu {
+    .box .box-area .options_menu {
 
         position: absolute;
         background-color: var(--dracula);
@@ -761,7 +761,7 @@ body {
     }
 
 
-    .stdin_area {
+    .box .box-area .stdin_area {
 
         position: absolute;
         width: 100%;
@@ -776,7 +776,7 @@ body {
         z-index: 8;
     }
 
-    .stdout_area {
+    .box .box-area .stdout_area {
 
         position: absolute;
         width: 100%;
@@ -790,7 +790,7 @@ body {
 
 
     /* the bottom banner */
-    .banner {
+    .box .banner {
         font-size:xx-small;
         color:white;
         background-color: var(--dracula);
@@ -809,7 +809,7 @@ body {
 
 
 
-    .hide_stdin {
+    .box .box-area .options_menu .hide_stdin {
 
         display: none;
         visibility: hidden;
@@ -831,7 +831,7 @@ body {
 
     }
 
-    .language {
+    .box .box-area .options_menu .language {
         -webkit-appearance: none;
         -moz-appearance: none;
 
@@ -854,7 +854,7 @@ body {
 
     }
 
-    .load {
+    .box .box-area .options_menu .load {
         box-sizing: border-box;
         border: 1px solid var(--border-color);
         color: var(--text-primary);
@@ -870,7 +870,7 @@ body {
         cursor: pointer;
     }
 
-    .setting {
+    .box .box-area .options_menu .setting {
         box-sizing: border-box;
         border: 1px solid var(--border-color);
         color: var(--text-primary);
@@ -888,7 +888,7 @@ body {
 
     }
 
-    .run_button {
+    .box .box-area .options_menu .run_button {
         box-sizing: border-box;
         background-color: #3498db;
         /* border: 1px solid var(--border-color); */
@@ -912,7 +912,7 @@ body {
 
     /* stdout elements */
 
-    .right_topbar {
+    .box .box-area .stdout_area .right_topbar {
 
         background-color: var(--dracula);
         height: 8%;
@@ -927,7 +927,7 @@ body {
 
     }
 
-    .output {
+    .box .box-area .stdout_area .output {
         background-color: var(--dracula);
         color: var(--text-primary);
 
@@ -949,7 +949,7 @@ body {
         white-space: pre-wrap;
     }
 
-    .right_bottombar {
+    .box .box-area .stdout_area .right_bottombar {
         background-color: var(--dracula);
         height: 5%;
         width: 100%;
@@ -963,20 +963,20 @@ body {
 
 
 
-    .time {
+    .box .box-area .stdout_area .right_topbar .time {
         margin-left: 8px;
         color: var(--text-primary);
 
 
     }
 
-    .language_info {
+    .box .box-area .stdout_area .right_topbar .language_info {
         margin-left: auto;
         color: var(--text-primary);
 
     }
 
-    .status {
+    .box .box-area .stdout_area .right_topbar .status {
         /* border: 1px solid rgb(42, 150, 0); */
         border: none;
 
@@ -1003,7 +1003,7 @@ body {
 
     }
 
-    .loader {
+    .box .box-area .stdout_area .right_topbar .status .loader {
         border: 2px solid #f3f3f3;
         border-radius: 50%;
         border-top: 2px solid #3498db;
