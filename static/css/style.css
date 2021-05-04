@@ -207,7 +207,7 @@ body {
     width: 50%;
     height: 3px;
     cursor: ns-resize;
-    z-index: 6;
+    z-index: 11;
 
 }
 
@@ -220,7 +220,7 @@ body {
     width: 3px;
     height: 100%;
     cursor: ew-resize;
-    z-index: 6;
+    z-index: 11;
 
 }
 
