@@ -18,18 +18,18 @@ function change_language(event) {
     // lang = event.target.value;
     if (language == "cpp" | language == "c") {
         ed.getSession().setMode("ace/mode/c_cpp");
-        $(".filename").html("code.cpp");
+        $(".filename1").html("code.cpp");
     } else if (language == "python3") {
         ed.getSession().setMode("ace/mode/python");
-        $(".filename").html("code.py");
+        $(".filename1").html("code.py");
 
     } else if (language == "openJDK") {
         ed.getSession().setMode("ace/mode/java");
-        $(".filename").html("code.java");
+        $(".filename1").html("code.java");
 
     } else if (language == "javascript") {
         ed.getSession().setMode("ace/mode/javascript");
-        $(".filename").html("code.js");
+        $(".filename1").html("code.js");
     }
 }
 
