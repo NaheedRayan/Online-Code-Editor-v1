@@ -574,10 +574,7 @@ body {
         cursor: pointer;
     }
 
-    .box .box_options .filename1:hover{
-        background-color:var(--border-color);
-    }
-
+   
     .box .box_options .filename2 {
         background-color: black;
         color: white;
@@ -599,17 +596,13 @@ body {
         top: 1px;
         z-index: 9;
 
+        border-radius: 10px 10px 0px 0px;
+
+
         cursor: pointer;
     }
 
-    .box .box_options .filename2:hover{
-        background-color:var(--border-color);
-
-        border-left: 1px solid var(--border-color);
-        border-right: 1px solid var(--border-color);
-        border-top: 1px solid var(--border-color);
-        border-radius: 10px 10px 0px 0px;
-    }
+   
 
     .box .box_options .filename3 {
         background-color: black;
@@ -632,16 +625,12 @@ body {
         top: 1px;
         z-index: 8;
 
+        border-radius: 10px 10px 0px 0px;
+
+
         cursor: pointer;
     }
-    .box .box_options .filename3:hover{
-        background-color:var(--border-color);
-
-        border-left: 1px solid var(--border-color);
-        border-right: 1px solid var(--border-color);
-        border-top: 1px solid var(--border-color);
-        border-radius: 10px 10px 0px 0px;
-    }
+   
 
 
     .min_max_button {

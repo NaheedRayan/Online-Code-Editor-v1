@@ -23,7 +23,7 @@ function change_language(event) {
         ed.getSession().setMode("ace/mode/python");
         $(".filename1").html("code.py");
 
-    } else if (language == "openJDK") {
+    } else if (language == "openJDK-8") {
         ed.getSession().setMode("ace/mode/java");
         $(".filename1").html("code.java");
 
