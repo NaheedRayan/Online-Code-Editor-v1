@@ -30,7 +30,7 @@ body {
     position: fixed;
 }
 
-.box .box_options {
+.box_options {
     /* background-color: var(--dracula); */
     width: 100%;
     height: 5%;
@@ -129,7 +129,7 @@ body {
 }
 
 
-.box .box_options .min_max_button {
+.min_max_button {
     background-color: var(--dracula);
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -151,7 +151,7 @@ body {
 
 }
 
-.box .box_options .about {
+.about {
     background-color: var(--dracula);
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -175,7 +175,7 @@ body {
 }
 
 
-.box .box-area {
+.box-area {
     height: 93%;
     width: 100%;
     background-color: aquamarine;
@@ -184,7 +184,7 @@ body {
 
 }
 
-.box .box-area .editor {
+.editor {
 
     position: absolute;
     width: 50%;
@@ -200,7 +200,7 @@ body {
 }
 
 
-.box .box-area .line1 {
+.line1 {
     position: absolute;
     background-color: var(--border-color);
     top: 70%;
@@ -212,7 +212,7 @@ body {
 }
 
 
-.box .box-area .line2 {
+.line2 {
     position: absolute;
     background-color: var(--border-color);
     top: 0;
@@ -224,7 +224,7 @@ body {
 
 }
 
-.box .box-area .options_menu {
+.options_menu {
 
     position: absolute;
     background-color: var(--dracula);
@@ -248,7 +248,7 @@ body {
 }
 
 
-.box .box-area .stdin_area {
+.stdin_area {
 
     position: absolute;
     width: 50%;
@@ -262,7 +262,7 @@ body {
 
 }
 
-.box .box-area .stdout_area {
+.stdout_area {
 
     position: absolute;
     width: 50%;
@@ -274,7 +274,7 @@ body {
 
 
 /* the bottom banner */
-.box .banner {
+.banner {
 
     font-size:xx-small;
     color:white;
@@ -290,7 +290,7 @@ body {
     /* bottom: 0; */
 }
 
-.box .box-area .options_menu .hide_stdin {
+.hide_stdin {
     border: 1px solid var(--border-color);
     color: var(--text-primary);
 
@@ -309,7 +309,7 @@ body {
 
 }
 
-.box .box-area .options_menu .language {
+.language {
     -webkit-appearance: none;
     -moz-appearance: none;
 
@@ -332,7 +332,7 @@ body {
 
 }
 
-.box .box-area .options_menu .load {
+.load {
     box-sizing: border-box;
     border: 1px solid var(--border-color);
     color: var(--text-primary);
@@ -351,7 +351,7 @@ body {
 
 }
 
-.box .box-area .options_menu .setting {
+.setting {
     box-sizing: border-box;
     border: 1px solid var(--border-color);
     color: var(--text-primary);
@@ -369,7 +369,7 @@ body {
 
 }
 
-.box .box-area .options_menu .run_button {
+.run_button {
     box-sizing: border-box;
     background-color: #3498db;
     /* border: 1px solid var(--border-color); */
@@ -393,7 +393,7 @@ body {
 
 /* stdout elements */
 
-.box .box-area .stdout_area .right_topbar {
+.right_topbar {
 
     background-color: var(--dracula);
     height: 8%;
@@ -408,7 +408,7 @@ body {
 
 }
 
-.box .box-area .stdout_area .output {
+.output {
     background-color: var(--dracula);
     color: var(--text-primary);
 
@@ -429,7 +429,7 @@ body {
     white-space: pre-wrap;
 }
 
-.box .box-area .stdout_area .right_bottombar {
+.right_bottombar {
     background-color: var(--dracula);
     height: 5%;
     width: 100%;
@@ -443,20 +443,20 @@ body {
 
 
 
-.box .box-area .stdout_area .right_topbar .time {
+.time {
     margin-left: 8px;
     color: var(--text-primary);
 
 
 }
 
-.box .box-area .stdout_area .right_topbar .language_info {
+.language_info {
     margin-left: auto;
     color: var(--text-primary);
 
 }
 
-.box .box-area .stdout_area .right_topbar .status {
+.status {
     /* border: 1px solid rgb(42, 150, 0); */
     border: none;
 
@@ -483,7 +483,7 @@ body {
 
 }
 
-.box .box-area .stdout_area .right_topbar .status .loader {
+.loader {
     border: 2px solid #f3f3f3;
     border-radius: 50%;
     border-top: 2px solid #3498db;
@@ -517,6 +517,35 @@ body {
     }
 }
 
+@media  only screen and (max-width:1010px) and (min-width:1000px){
+    .line1 {
+
+        position: absolute;
+        background-color: var(--border-color);
+        top: 70%;
+        width: 50%;
+        height: 3px;
+        cursor: ns-resize;
+        z-index: 6;
+
+    }
+
+
+    .line2 {
+
+        position: absolute;
+        background-color: var(--border-color);
+        top: 0;
+        right: 50%;
+        width: 3px;
+        height: 100%;
+        cursor: ew-resize;
+        z-index: 6;
+
+    }
+}
+
+
 @media only screen and (max-width: 1000px) {
 
     body {
@@ -536,7 +565,7 @@ body {
         position: fixed;
     }
 
-    .box .box_options {
+    .box_options {
         /* background-color: var(--dracula); */
         width: 100%;
         height: 5%;
@@ -633,7 +662,7 @@ body {
    
 
 
-.box .box_options .min_max_button {
+    .min_max_button {
         background-color: var(--dracula);
         border: 1px solid var(--border-color);
         border-radius: 5px;
@@ -655,7 +684,7 @@ body {
 
     }
 
-    .box .box_options .about {
+    .about {
         background-color: var(--dracula);
         border: 1px solid var(--border-color);
         border-radius: 5px;
@@ -679,7 +708,7 @@ body {
     }
 
 
-    .box .box-area {
+    .box-area {
         height: 93%;
         width: 100%;
         background-color: aquamarine;
@@ -688,12 +717,12 @@ body {
 
     }
 
-    .box .box-area .editor {
+    .editor {
 
         position: absolute;
-        width: 100%;
-        height: 95%;
-        top: 0;
+        width: 100% !important; 
+        height: 95% !important;
+        top: 0 !important;
         left: 0;
 
         box-sizing: border-box;
@@ -702,19 +731,19 @@ body {
         border-bottom: 1px solid var(--border-color);
         border-top: 1px solid var(--border-color);
 
-        z-index: 9;
+        z-index: 10;
 
     }
 
 
-    .box .box-area .line1 {
+    .line1 {
 
         visibility: hidden;
 
         position: absolute;
         background-color: var(--border-color);
-        top: 70%;
-        width: 50%;
+        top: 70% !important;
+        width: 50% !important;
         height: 3px;
         cursor: ns-resize;
         z-index: 6;
@@ -722,51 +751,47 @@ body {
     }
 
 
-    .box .box-area .line2 {
+    .line2 {
 
         visibility: hidden;
 
         position: absolute;
         background-color: var(--border-color);
-        top: 0;
+        top: 0!important;
         right: 50%;
-        width: 3px;
+        width: 3px!important;
         height: 100%;
         cursor: ew-resize;
-        z-index: 6;
+        z-index: 5;
 
     }
 
-    .box .box-area .options_menu {
+    .options_menu {
 
-        position: absolute;
+        position:relative;
         background-color: var(--dracula);
-
-
         height: 5%;
-        width: 100%;
-
-        top: 95%;
+        width: 100%!important;
+        top: 95%!important;
         left: 0;
-
         display: flex;
         align-items: center;
-
         box-sizing: border-box;
         border: 1px solid var(--border-color);
         /* border-bottom: 2px solid var(--border-color); */
 
         /* cursor: ns-resize; */
-        z-index: 9;
+        z-index: 11;
     }
 
 
-    .box .box-area .stdin_area {
+    .stdin_area {
 
         position: absolute;
-        width: 100%;
-        height: 95%;
+        width: 100% !important;
+        height: 95% !important;
         bottom: 5%;
+        top: 0!important;
         left: 0;
         /* background-color: burlywood; */
 
@@ -776,21 +801,21 @@ body {
         z-index: 8;
     }
 
-    .box .box-area .stdout_area {
+    .stdout_area {
 
         position: absolute;
-        width: 100%;
+        width: 100% !important;
         height: 95%;
-        top: 0;
+        top: 0 !important;
         right: 0;
         /* background-color: rgb(160, 97, 15); */
 
-        z-index: 8;
+        z-index: 7;
     }
 
 
     /* the bottom banner */
-    .box .banner {
+    .banner {
         font-size:xx-small;
         color:white;
         background-color: var(--dracula);
@@ -809,7 +834,7 @@ body {
 
 
 
-    .box .box-area .options_menu .hide_stdin {
+    .hide_stdin {
 
         display: none;
         visibility: hidden;
@@ -831,7 +856,7 @@ body {
 
     }
 
-    .box .box-area .options_menu .language {
+    .language {
         -webkit-appearance: none;
         -moz-appearance: none;
 
@@ -854,7 +879,7 @@ body {
 
     }
 
-    .box .box-area .options_menu .load {
+    .load {
         box-sizing: border-box;
         border: 1px solid var(--border-color);
         color: var(--text-primary);
@@ -870,7 +895,7 @@ body {
         cursor: pointer;
     }
 
-    .box .box-area .options_menu .setting {
+    .setting {
         box-sizing: border-box;
         border: 1px solid var(--border-color);
         color: var(--text-primary);
@@ -888,7 +913,7 @@ body {
 
     }
 
-    .box .box-area .options_menu .run_button {
+    .run_button {
         box-sizing: border-box;
         background-color: #3498db;
         /* border: 1px solid var(--border-color); */
@@ -912,7 +937,7 @@ body {
 
     /* stdout elements */
 
-    .box .box-area .stdout_area .right_topbar {
+    .right_topbar {
 
         background-color: var(--dracula);
         height: 8%;
@@ -927,7 +952,7 @@ body {
 
     }
 
-    .box .box-area .stdout_area .output {
+    .output {
         background-color: var(--dracula);
         color: var(--text-primary);
 
@@ -949,7 +974,7 @@ body {
         white-space: pre-wrap;
     }
 
-    .box .box-area .stdout_area .right_bottombar {
+    .right_bottombar {
         background-color: var(--dracula);
         height: 5%;
         width: 100%;
@@ -963,20 +988,20 @@ body {
 
 
 
-    .box .box-area .stdout_area .right_topbar .time {
+    .time {
         margin-left: 8px;
         color: var(--text-primary);
 
 
     }
 
-    .box .box-area .stdout_area .right_topbar .language_info {
+    .language_info {
         margin-left: auto;
         color: var(--text-primary);
 
     }
 
-    .box .box-area .stdout_area .right_topbar .status {
+    .status {
         /* border: 1px solid rgb(42, 150, 0); */
         border: none;
 
@@ -1003,7 +1028,7 @@ body {
 
     }
 
-    .box .box-area .stdout_area .right_topbar .status .loader {
+    .loader {
         border: 2px solid #f3f3f3;
         border-radius: 50%;
         border-top: 2px solid #3498db;
