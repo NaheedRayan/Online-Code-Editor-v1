@@ -517,35 +517,6 @@ body {
     }
 }
 
-@media  only screen and (max-width:1010px) and (min-width:1000px){
-    .line1 {
-
-        position: absolute;
-        background-color: var(--border-color);
-        top: 70%;
-        width: 50%;
-        height: 3px;
-        cursor: ns-resize;
-        z-index: 6;
-
-    }
-
-
-    .line2 {
-
-        position: absolute;
-        background-color: var(--border-color);
-        top: 0;
-        right: 50%;
-        width: 3px;
-        height: 100%;
-        cursor: ew-resize;
-        z-index: 6;
-
-    }
-}
-
-
 @media only screen and (max-width: 1000px) {
 
     body {
@@ -731,7 +702,7 @@ body {
         border-bottom: 1px solid var(--border-color);
         border-top: 1px solid var(--border-color);
 
-        z-index: 10;
+        z-index: 9;
 
     }
 
@@ -757,31 +728,36 @@ body {
 
         position: absolute;
         background-color: var(--border-color);
-        top: 0!important;
+        top: 0 !important;
         right: 50%;
-        width: 3px!important;
+        width: 3px;
         height: 100%;
         cursor: ew-resize;
-        z-index: 5;
+        z-index: 6;
 
     }
 
     .options_menu {
 
-        position:relative;
+        position: absolute;
         background-color: var(--dracula);
+
+
         height: 5%;
-        width: 100%!important;
-        top: 95%!important;
+        width: 100% !important;
+
+        top: 95% !important;
         left: 0;
+
         display: flex;
         align-items: center;
+
         box-sizing: border-box;
         border: 1px solid var(--border-color);
         /* border-bottom: 2px solid var(--border-color); */
 
         /* cursor: ns-resize; */
-        z-index: 11;
+        z-index: 9;
     }
 
 
@@ -791,7 +767,6 @@ body {
         width: 100% !important;
         height: 95% !important;
         bottom: 5%;
-        top: 0!important;
         left: 0;
         /* background-color: burlywood; */
 
@@ -810,7 +785,7 @@ body {
         right: 0;
         /* background-color: rgb(160, 97, 15); */
 
-        z-index: 7;
+        z-index: 8;
     }
 
 
