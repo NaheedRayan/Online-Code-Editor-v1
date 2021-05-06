@@ -85,7 +85,9 @@ document.querySelector(".run_button").addEventListener("click", (e) => {
     // var myJson = JSON.stringify(data)
     // console.log(myJson)
 
-    fetch("http://localhost:8080/submit", {
+    // "http://localhost:8080/submit"
+
+    fetch("http://192.168.43.152:8080/submit", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
