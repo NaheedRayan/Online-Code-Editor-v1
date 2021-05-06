@@ -6,8 +6,11 @@ var stdout_area = document.querySelector(".stdout_area")
 
 
 var options_menu = document.getElementById("options_menu")
-var editor = document.getElementById("editor")
+var editor = document.querySelector(".editor")
 var stdin_area = document.getElementById("stdin_area")
+
+var hide_stdin = document.querySelector(".hide_stdin");
+
 
 // for identifying mouse drag
 var isDragging = false;
@@ -77,7 +80,7 @@ document.addEventListener('mousemove', function (e) {
 
         } else if (e.pageY == oldy && e.pageX < oldx && rounded_value2 >= 45) {
             // console.log('Left')
-            
+
             rounded_value2 -= 1;
             options_menu.style.width = `${rounded_value2}%`;
             line1.style.width = `${rounded_value2}%`;
@@ -85,11 +88,11 @@ document.addEventListener('mousemove', function (e) {
             stdin_area.style.width = `${rounded_value2}%`;
             stdout_area.style.width = `${100-rounded_value2}%`;
             line2.style.right = `${100-rounded_value2}%`;
-            
-        
+
+
         } else if (e.pageY == oldy && e.pageX > oldx && rounded_value2 <= 75) {
             // console.log('Right')
-            
+
             rounded_value2 += 1;
             options_menu.style.width = `${rounded_value2}%`;
             line1.style.width = `${rounded_value2}%`;
@@ -108,3 +111,50 @@ document.addEventListener('mouseup', function (e) {
     // Turn off dragging flag when user mouse is up
     isDragging = false;
 });
+
+
+
+let z = 1;
+
+hide_stdin.addEventListener("click", () => {
+    if (z == 1) {
+
+
+        editor.style.height = "95%";
+        editor.style.width = `${rounded_value2}`;
+
+        line1.style.top = "95%";
+        line1.style.width = `${rounded_value2}`;
+
+        options_menu.style.top = "95%";
+        options_menu.style.width = `${rounded_value2}`;
+
+        stdin_area.style.height = "0%";
+        stdin_area.style.width = `${rounded_value2}`;
+        $(".hide_stdin").html("Show Stdin");
+
+        z = !z ;
+    }
+
+    else{
+        editor.style.height = "70%";
+        editor.style.width = `${rounded_value2}`;
+
+        line1.style.top = "70%";
+        line1.style.width = `${rounded_value2}`;
+
+        options_menu.style.top = "70%";
+        options_menu.style.width = `${rounded_value2}`;
+
+        stdin_area.style.height = "25%";
+        stdin_area.style.width = `${rounded_value2}`;
+
+        $(".hide_stdin").html("Hide Stdin");
+
+        z = !z ;
+
+
+    }
+
+
+})
