@@ -2,6 +2,8 @@
 var ed = ace.edit("editor");
 var ed2 = ace.edit("stdin_area");
 
+var x = window.matchMedia("(max-width: 1000px)")
+
 
 var output = document.querySelector(".output");
 
@@ -37,6 +39,17 @@ function change_language(event) {
 
 document.querySelector(".run_button").addEventListener("click", (e) => {
     console.log("run button is clicked");
+    
+    // for media query
+    if (x.matches) {
+        filename1.style.cssText = "background-color: black; border-left:none ;border-right: none;border-top:none;z-index:9";
+        filename2.style.cssText = "background-color: black; border-left:none ;border-right: none;border-top:none;z-index:9";
+        filename3.style.cssText = "background-color:var(--dracula); border-left:1px solid var(--border-color) ;border-right: 1px solid var(--border-color);border-top:1px solid var(--border-color);z-index:10";
+        editor.style.zIndex = "8";
+        stdin_area.style.zIndex = "8";
+        stdout_area.style.zIndex = "9";
+
+    }
 
     $(".loader").show();
     $(".status").show();
@@ -53,7 +66,7 @@ document.querySelector(".run_button").addEventListener("click", (e) => {
     $(".language_info").html(lang);
 
 
-    console.log(dateTime);
+    // console.log(dateTime);
 
     let code = ed.getValue();
     let input = ed2.getValue();
