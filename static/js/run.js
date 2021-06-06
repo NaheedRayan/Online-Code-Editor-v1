@@ -39,7 +39,7 @@ function change_language(event) {
 
 document.querySelector(".run_button").addEventListener("click", (e) => {
     console.log("run button is clicked");
-    
+
     // for media query
     if (x.matches) {
         filename1.style.cssText = "background-color: black; border-left:none ;border-right: none;border-top:none;z-index:9";
@@ -55,6 +55,8 @@ document.querySelector(".run_button").addEventListener("click", (e) => {
     $(".status").show();
     $(".status").css("background-color", "rgb(139, 139, 139)")
     $(".success").html("");
+
+    output.innerHTML = "";
 
 
     var today = new Date();
@@ -87,7 +89,11 @@ document.querySelector(".run_button").addEventListener("click", (e) => {
 
     // "http://localhost:8080/submit"
 
-    fetch("http://192.168.43.152:8080/submit", {
+
+    // let server_link = "http://localhost:8080/submit" ;
+    let server_link = "http://52.172.231.206:8080/submit";
+
+    fetch(server_link, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -119,37 +125,130 @@ function output_link(data_link) {
     console.log(data_link)
 
 
-    let myvar = setInterval(function checklink() {
-        fetch(data_link)
-            .then(res => {
-                console.log(res);
-                return res.json();
-            })
-            .then(data => {
+    // let myvar = setInterval(function checklink() {
+    fetch(data_link)
+        .then(res => {
+            console.log(res);
+            return res.json();
+        })
+        .then(data => {
 
-                if (data.output) {
-                    console.log(data);
-                    clearInterval(myvar);
-                    output.innerHTML = data.output;
-                    $(".success").html(data.status);
-                    $(".loader").hide();
-                    if (data.status == "Successful")
-                        $(".status").css("background-color", "rgb(119, 199, 0)");
-                    else
-                        $(".status").css("background-color", "rgb(235, 75, 75)");
+            console.log(data.status);
+            if (data.status == "Successful") {
+                console.log(data);
 
-                } else if (data.status) {
-                    // console.log(data);
-                    // output.innerHTML = data.status;
-                    $(".success").html(data.status);
-                } else {
-                    clearInterval(myvar);
-                    output.innerHTML = "Something went wrong";
-                }
+                output.innerHTML = data.output;
+                $(".success").html(data.status);
+                $(".loader").hide(); //hide the loader
+                $(".status").css("background-color", "rgb(119, 199, 0)"); //make the background green
 
-            })
-    }, 500)
+            } else if (data.status == "Failed" || data.status == "Invalid Request") {
+                console.log(data)
 
+                output.innerHTML = data.output;
+                $(".success").html(data.status);
+                $(".loader").hide(); //hide the loader
+                $(".status").css("background-color", "rgb(235, 75, 75)"); //make the background red
 
+            } else if (data.status == "Queued") {
+                $(".success").html(data.status);
+                $(".status").css("background-color", "rgb(139, 139, 139)"); //make the background grey
+                output_link(data_link)//recursive call
+
+            } else if (data.status == "Processing") {
+                $(".success").html(data.status);
+                $(".status").css("background-color", "rgb(139, 139, 139)"); //make the background grey
+                output_link(data_link)//recursive call
+
+            } else if (data.status == "Runtime Error") {
+                output.innerHTML = "Out of Memory";
+                $(".success").html(data.status);
+                $(".loader").hide(); //hide the loader
+                $(".status").css("background-color", "rgb(235, 75, 75)"); //make the background red
+
+            } else {
+                output.innerHTML = "Something went wrong";
+                $(".success").html("Failed");
+                $(".loader").hide(); //hide the loader
+                $(".status").css("background-color", "rgb(235, 75, 75)"); //make the background red
+            }
+        })
 
 }
+
+
+// // when the link is available
+// function output_link(data_link) {
+//     console.log(data_link)
+
+
+//     let myvar = setInterval(function checklink() {
+//         fetch(data_link)
+//             .then(res => {
+//                 console.log(res);
+//                 return res.json();
+//             })
+//             .then(data => {
+
+//                 console.log(data.status);
+
+
+
+//                 if(data.status == "Successful"){
+//                     console.log(data);
+//                     clearInterval(myvar);
+//                     output.innerHTML = data.output;
+//                     $(".success").html(data.status);
+//                     $(".loader").hide();//hide the loader
+//                     $(".status").css("background-color", "rgb(119, 199, 0)");//make the background green
+//                 }else if(data.status == "Failed" || data.status == "Invalid Request"){
+//                     console.log(data)
+//                     clearInterval(myvar);
+//                     output.innerHTML = data.output;
+//                     $(".success").html(data.status);
+//                     $(".loader").hide();//hide the loader
+//                     $(".status").css("background-color", "rgb(235, 75, 75)");//make the background red
+//                 }else if(data.status == "Queued"){
+//                     $(".success").html(data.status);
+//                     $(".status").css("background-color", "rgb(139, 139, 139)");//make the background grey
+//                 }else if(data.status == "Processing"){
+//                     $(".success").html(data.status);
+//                     $(".status").css("background-color", "rgb(139, 139, 139)");//make the background grey
+//                 }else if(data.status == "Runtime Error"){
+//                     clearInterval(myvar);
+//                     output.innerHTML = "Out of Memory";
+//                     $(".success").html(data.status);
+//                     $(".loader").hide();//hide the loader
+//                     $(".status").css("background-color", "rgb(235, 75, 75)");//make the background red
+//                 }else {
+//                     clearInterval(myvar);
+//                     output.innerHTML = "Something went wrong";
+//                     $(".success").html("Failed");
+//                     $(".loader").hide();//hide the loader
+//                     $(".status").css("background-color", "rgb(235, 75, 75)");//make the background red
+//                 }
+
+
+//                 // if (data.output) {
+//                 //     console.log(data);
+//                 //     clearInterval(myvar);
+//                 //     output.innerHTML = data.output;
+//                 //     $(".success").html(data.status);
+//                 //     $(".loader").hide();
+//                 //     if (data.status == "Successful")
+//                 //         $(".status").css("background-color", "rgb(119, 199, 0)");
+//                 //     else
+//                 //         $(".status").css("background-color", "rgb(235, 75, 75)");
+
+//                 // } else if (data.status) {
+//                 //     // console.log(data);
+//                 //     // output.innerHTML = data.status;
+//                 //     $(".success").html(data.status);
+//                 // } else {
+//                 //     clearInterval(myvar);
+//                 //     output.innerHTML = "Something went wrong";
+//                 // }
+
+//             })
+//     }, 500)
+// }
