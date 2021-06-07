@@ -25,10 +25,10 @@ body {
 .box {
     /* background-color: var(--dracula); */
 
-    top: 25px;
-    right: 25px;
-    bottom: 25px;
-    left: 25px;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
     /* border-radius: 15px; */
     /* display:flex; */
 
