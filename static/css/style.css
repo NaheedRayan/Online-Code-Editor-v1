@@ -1,9 +1,14 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
 :root {
-    font-size: 16px;
+    /* font-size: 16px; */
     font-family: "B612", serif;
 
     --text-primary: #cccccc;
     --text-secondary: #ececec;
+
+    background-color: black;
+
 
 
 
@@ -151,7 +156,24 @@ body {
 
 }
 
-.about {
+
+.fi-rr-interrogation {
+    height: 100%;
+    width: 2em;
+    font-size: 20px;
+    ;
+
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.fi-rr-interrogation:hover {
+    color: #80c8f8;
+}
+
+/* .about {
     background-color: var(--dracula);
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -172,13 +194,13 @@ body {
 
 
     margin-left: 10px;
-}
+} */
 
 
 .box-area {
     height: 93%;
     width: 100%;
-    background-color: aquamarine;
+    background-color: black;
 
     position: relative;
 
@@ -294,20 +316,26 @@ body {
     border: 1px solid var(--border-color);
     color: var(--text-primary);
 
+    display: grid;
+    place-items: center;
 
     font-size: 12px;
+    height: 80%;
+    padding-left: 10px;
+    padding-right: 10px;
 
     border-radius: 5px;
-    padding-bottom: 3px;
-    padding-top: 3px;
-    padding-left: 8px;
-    padding-right: 8px;
     margin-left: 15px;
 
     cursor: pointer;
-
-
 }
+
+.hide_stdin:hover {
+    color: #3498db;
+}
+
+
+
 
 .language {
     -webkit-appearance: none;
@@ -317,14 +345,15 @@ body {
     border: 1px solid var(--border-color);
     color: #5e5e5e;
 
+    display: grid;
+    place-items: center;
+
     font-size: 12px;
+    height: 80%;
 
 
     border-radius: 5px 0px 0px 5px;
-    padding-bottom: 3px;
-    padding-top: 3px;
-    padding-left: 8px;
-    padding-right: 8px;
+
     margin-left: auto;
 
     cursor: pointer;
@@ -332,25 +361,49 @@ body {
 
 }
 
+
 .load {
     box-sizing: border-box;
     border: 1px solid var(--border-color);
     color: var(--text-primary);
 
+    display: grid;
+    place-items: center;
 
     font-size: 12px;
-
-    padding-bottom: 3px;
-    padding-top: 3px;
-    padding-left: 8px;
-    padding-right: 8px;
+    height: 80%;
+    width: 5em;
 
     cursor: pointer;
-
-
-
 }
 
+.load:hover {
+    color: #3498db;
+}
+
+.fi-rr-settings {
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    height: 80%;
+    width: 2em;
+
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+
+    /* padding-bottom: 3px;
+    padding-top: 3px;
+    padding-left: 8px;
+    padding-right: 8px; */
+
+    cursor: pointer;
+}
+.fi-rr-settings:hover {
+    color: #3498db;
+}
+
+/* 
 .setting {
     box-sizing: border-box;
     border: 1px solid var(--border-color);
@@ -367,6 +420,28 @@ body {
     cursor: pointer;
 
 
+} */
+.fi-rr-disk {
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    height: 80%;
+    width: 2em;
+
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+
+    /* padding-bottom: 3px;
+    padding-top: 3px;
+    padding-left: 8px;
+    padding-right: 8px; */
+
+    cursor: pointer;
+}
+
+.fi-rr-disk:hover {
+    color: #3498db;
 }
 
 .run_button {
@@ -375,19 +450,17 @@ body {
     /* border: 1px solid var(--border-color); */
     color: var(--text-primary);
 
+    display: grid;
+    place-items: center;
 
     font-size: 12px;
+    height: 80%;
+    width: 5em;
 
     border-radius: 0px 5px 5px 0px;
-    padding-bottom: 3px;
-    padding-top: 3px;
-    padding-left: 8px;
-    padding-right: 8px;
-
     margin-right: 15px;
 
     cursor: pointer;
-
 }
 
 
@@ -400,6 +473,8 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+
+    border-radius: 0 10px 0 0;
 
     box-sizing: border-box;
     border-bottom: 1px dashed var(--border-color);
@@ -526,10 +601,10 @@ body {
     .box {
         /* background-color: var(--dracula); */
 
-        top: 25px;
-        right: 25px;
-        bottom: 25px;
-        left: 25px;
+        top: 5px;
+        right: 3px;
+        bottom: 5px;
+        left: 3px;
         /* border-radius: 15px; */
         /* display:flex; */
 
@@ -572,10 +647,10 @@ body {
         border-radius: 10px 10px 0px 0px;
 
         cursor: pointer;
-        font-size:small;
+        font-size: small;
     }
 
-   
+
     .box .box_options .filename2 {
         background-color: black;
         color: white;
@@ -601,11 +676,11 @@ body {
 
 
         cursor: pointer;
-        font-size:small;
+        font-size: small;
 
     }
 
-   
+
 
     .box .box_options .filename3 {
         background-color: black;
@@ -632,10 +707,10 @@ body {
 
 
         cursor: pointer;
-        font-size:small;
+        font-size: small;
 
     }
-   
+
 
 
     .min_max_button {
@@ -687,7 +762,7 @@ body {
     .box-area {
         height: 93%;
         width: 100%;
-        background-color: aquamarine;
+        background-color: black;
 
         position: relative;
 
@@ -695,8 +770,10 @@ body {
 
     .editor {
 
+        font-size: 12px !important;
+
         position: absolute;
-        width: 100% !important; 
+        width: 100% !important;
         height: 93% !important;
         top: 0 !important;
         left: 0;
@@ -768,6 +845,8 @@ body {
 
     .stdin_area {
 
+        font-size: 12px !important;
+
         position: absolute;
         width: 100% !important;
         height: 93% !important;
@@ -796,8 +875,8 @@ body {
 
     /* the bottom banner */
     .banner {
-        font-size:xx-small;
-        color:white;
+        font-size: xx-small;
+        color: white;
         background-color: var(--dracula);
         height: 3%;
         width: 100%;
@@ -935,6 +1014,8 @@ body {
     .output {
         background-color: var(--dracula);
         color: var(--text-primary);
+
+        font-size: 12px !important;
 
         height: 87%;
         width: 100%;
