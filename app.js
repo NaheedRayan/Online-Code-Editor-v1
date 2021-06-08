@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const cors = require('cors')
+// const cors = require('cors')
 const port = process.env.PORT || 5000;
+// const https = require('https');
+
 
 
 

@@ -94,11 +94,17 @@ document.querySelector(".run_button").addEventListener("click", (e) => {
     // let server_link = "http://52.172.231.206:8080/submit";
     let server_link = "https://52.172.231.206:8080/submit";
 
+    // const https = require('https');
+    // const httpsAgent = new https.Agent({
+    //     rejectUnauthorized:false
+    // })
+
     fetch(server_link, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
         },
+        // agent:httpsAgent,
         body: JSON.stringify(data)
     }).then(res => {
         console.log(res)
