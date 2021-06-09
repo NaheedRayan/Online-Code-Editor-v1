@@ -133,30 +133,6 @@ body {
     border-radius: 10px 10px 0px 0px; */
 }
 
-
-.min_max_button {
-    background-color: var(--dracula);
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-
-    color: var(--text-primary);
-
-    height: 50%;
-
-    padding-bottom: 3px;
-    padding-top: 3px;
-    padding-left: 8px;
-    padding-right: 8px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-left: auto;
-
-}
-
-
 .fi-rr-interrogation {
     height: 100%;
     width: 2em;
@@ -172,30 +148,6 @@ body {
 .fi-rr-interrogation:hover {
     color: #80c8f8;
 }
-
-/* .about {
-    background-color: var(--dracula);
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    color: var(--text-primary);
-
-
-    height: 50%;
-
-    padding-bottom: 3px;
-    padding-top: 3px;
-    padding-left: 8px;
-    padding-right: 8px;
-
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-    margin-left: 10px;
-} */
-
 
 .box-area {
     height: 93%;
@@ -403,24 +355,6 @@ body {
     color: #3498db;
 }
 
-/* 
-.setting {
-    box-sizing: border-box;
-    border: 1px solid var(--border-color);
-    color: var(--text-primary);
-
-
-    font-size: 12px;
-
-    padding-bottom: 3px;
-    padding-top: 3px;
-    padding-left: 8px;
-    padding-right: 8px;
-
-    cursor: pointer;
-
-
-} */
 .fi-rr-disk {
     box-sizing: border-box;
     border: 1px solid var(--border-color);
@@ -711,54 +645,6 @@ body {
 
     }
 
-
-
-    .min_max_button {
-        background-color: var(--dracula);
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-
-        color: var(--text-primary);
-
-        height: 50%;
-
-        padding-bottom: 3px;
-        padding-top: 3px;
-        padding-left: 8px;
-        padding-right: 8px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        margin-left: auto;
-
-    }
-
-    .about {
-        background-color: var(--dracula);
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-        color: var(--text-primary);
-
-
-        height: 50%;
-
-        padding-bottom: 3px;
-        padding-top: 3px;
-        padding-left: 8px;
-        padding-right: 8px;
-
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-
-        margin-left: 10px;
-    }
-
-
     .box-area {
         height: 93%;
         width: 100%;
@@ -954,23 +840,6 @@ body {
         cursor: pointer;
     }
 
-    .setting {
-        box-sizing: border-box;
-        border: 1px solid var(--border-color);
-        color: var(--text-primary);
-
-
-        font-size: 12px;
-
-        padding-bottom: 3px;
-        padding-top: 3px;
-        padding-left: 8px;
-        padding-right: 8px;
-
-        cursor: pointer;
-
-
-    }
 
     .run_button {
         box-sizing: border-box;
@@ -1004,10 +873,14 @@ body {
         display: flex;
         align-items: center;
 
+        border-radius: 0 0 0 0;
+
         box-sizing: border-box;
         border-bottom: 1px dashed var(--border-color);
         border-right: 1px solid var(--border-color);
         border-top: 1px solid var(--border-color);
+
+        font-size: 12px !important;
 
     }
 
@@ -1093,8 +966,8 @@ body {
         border: 2px solid #f3f3f3;
         border-radius: 50%;
         border-top: 2px solid #3498db;
-        width: 12px;
-        height: 12px;
+        width: 5px;
+        height: 5px;
         -webkit-animation: spin 2s linear infinite;
         /* Safari */
         animation: spin 2s linear infinite;

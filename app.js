@@ -11,7 +11,7 @@ const compression = require('compression')
 app.use(express.static(__dirname + '/static'));
 
 app.use(compression({
-    level: 9,
+    level: 7,
 }))
 
 app.get('/', (req, res) => {
