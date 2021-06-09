@@ -926,7 +926,8 @@ body {
         margin-left: 8px;
         color: var(--text-primary);
 
-
+        white-space: nowrap;
+        overflow-x: auto;
     }
 
     .language_info {
@@ -960,7 +961,10 @@ body {
         align-items: center;
         justify-content: center;
 
+        white-space: nowrap;
+        overflow-x:auto;
     }
+    
 
     .loader {
         border: 2px solid #f3f3f3;
