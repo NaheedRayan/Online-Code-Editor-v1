@@ -654,24 +654,51 @@ body {
 
     }
 
-    .editor {
+    @media only screen and (max-width: 1000px){
 
-        font-size: 12px !important;
+        .editor {
 
-        position: absolute;
-        width: 100% !important;
-        height: 93% !important;
-        top: 0 !important;
-        left: 0;
+            /* font-size: 12px !important; */
+    
+            position: absolute;
+            width: 100% !important;
+            height: 93% !important;
+            top: 0 !important;
+            left: 0;
+    
+            box-sizing: border-box;
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-color);
+    
+            z-index: 9;
+    
+        }
+    }
+    
 
-        box-sizing: border-box;
-        border-left: 1px solid var(--border-color);
-        border-right: 1px solid var(--border-color);
-        border-bottom: 1px solid var(--border-color);
-        border-top: 1px solid var(--border-color);
+    @media only screen and (max-width: 500px){
 
-        z-index: 9;
+        .editor {
 
+            font-size: 12px !important;
+    
+            position: absolute;
+            width: 100% !important;
+            height: 93% !important;
+            top: 0 !important;
+            left: 0;
+    
+            box-sizing: border-box;
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-color);
+    
+            z-index: 9;
+    
+        }
     }
 
 
@@ -728,23 +755,44 @@ body {
         z-index: 9;
     }
 
+    @media only screen and (max-width: 1000px){
+        .stdin_area {
 
-    .stdin_area {
-
-        font-size: 12px !important;
-
-        position: absolute;
-        width: 100% !important;
-        height: 93% !important;
-        bottom: 7% !important;
-        left: 0;
-        /* background-color: burlywood; */
-
-        box-sizing: border-box;
-        border: 1px solid var(--border-color);
-
-        z-index: 8;
+            /* font-size: 12px !important; */
+    
+            position: absolute;
+            width: 100% !important;
+            height: 93% !important;
+            bottom: 7% !important;
+            left: 0;
+            /* background-color: burlywood; */
+    
+            box-sizing: border-box;
+            border: 1px solid var(--border-color);
+    
+            z-index: 8;
+        }
     }
+
+    @media only screen and (max-width: 500px){
+        .stdin_area {
+
+            font-size: 12px !important;
+    
+            position: absolute;
+            width: 100% !important;
+            height: 93% !important;
+            bottom: 7% !important;
+            left: 0;
+            /* background-color: burlywood; */
+    
+            box-sizing: border-box;
+            border: 1px solid var(--border-color);
+    
+            z-index: 8;
+        }
+    }
+    
 
     .stdout_area {
 
@@ -884,29 +932,57 @@ body {
 
     }
 
-    .output {
-        background-color: var(--dracula);
-        color: var(--text-primary);
-
-        font-size: 12px !important;
-
-        height: 87%;
-        width: 100%;
-
-        outline: none;
-
-
-        box-sizing: border-box;
-        border-bottom: 1px solid var(--border-color);
-        border-left: 1px solid var(--border-color);
-        border-right: 1px solid var(--border-color);
-
-        padding: 10px;
-        overflow: auto;
-
-        /* for tab and newline */
-        white-space: pre-wrap;
+    @media only screen and (max-width: 500px){
+        .output {
+            background-color: var(--dracula);
+            color: var(--text-primary);
+    
+            font-size: 12px !important;
+    
+            height: 87%;
+            width: 100%;
+    
+            outline: none;
+    
+    
+            box-sizing: border-box;
+            border-bottom: 1px solid var(--border-color);
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+    
+            padding: 10px;
+            overflow: auto;
+    
+            /* for tab and newline */
+            white-space: pre-wrap;
+        }
     }
+    @media only screen and (max-width: 1000px){
+        .output {
+            background-color: var(--dracula);
+            color: var(--text-primary);
+    
+            /* font-size: 12px !important; */
+    
+            height: 87%;
+            width: 100%;
+    
+            outline: none;
+    
+    
+            box-sizing: border-box;
+            border-bottom: 1px solid var(--border-color);
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+    
+            padding: 10px;
+            overflow: auto;
+    
+            /* for tab and newline */
+            white-space: pre-wrap;
+        }
+    }
+   
 
     .right_bottombar {
         background-color: var(--dracula);
