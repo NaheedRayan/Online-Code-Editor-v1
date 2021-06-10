@@ -1,5 +1,4 @@
 /* @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'); */
-
 :root {
     /* font-size: 16px; */
     font-family: "B612", serif;
@@ -8,9 +7,6 @@
     --text-secondary: #ececec;
 
     background-color: black;
-
-
-
 
     --dracula: rgb(39, 40, 34);
     --border-color: rgb(68, 68, 68);
@@ -125,7 +121,7 @@ body {
     top: 1px;
     z-index: -1;
 
-/* 
+    /* 
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     border-top: 1px solid var(--border-color);
@@ -250,8 +246,8 @@ body {
 /* the bottom banner */
 .banner {
 
-    font-size:xx-small;
-    color:white;
+    font-size: xx-small;
+    color: white;
     background-color: var(--dracula);
     height: 3%;
     width: 100%;
@@ -351,6 +347,7 @@ body {
 
     cursor: pointer;
 }
+
 .fi-rr-settings:hover {
     color: #3498db;
 }
@@ -556,6 +553,14 @@ body {
 
     }
 
+
+    @media only screen and (max-height: 500px) {
+        .box_options {
+            height: 8% !important;
+        }
+    }
+
+
     .box .box_options .filename1 {
         background-color: var(--dracula);
         color: white;
@@ -654,52 +659,48 @@ body {
 
     }
 
-    @media only screen and (max-width: 1000px){
+    @media only screen and (max-height: 500px) {
 
-        .editor {
-
-            /* font-size: 12px !important; */
-    
-            position: absolute;
-            width: 100% !important;
-            height: 93% !important;
-            top: 0 !important;
-            left: 0;
-    
-            box-sizing: border-box;
-            border-left: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            border-top: 1px solid var(--border-color);
-    
-            z-index: 9;
-    
+        .box-area {
+            height: 89% !important;
         }
     }
-    
 
-    @media only screen and (max-width: 500px){
 
+    .editor {
+
+        /* font-size: 12px !important; */
+
+        position: absolute;
+        width: 100% !important;
+        height: 93% !important;
+        top: 0 !important;
+        left: 0;
+
+        box-sizing: border-box;
+        border-left: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        border-top: 1px solid var(--border-color);
+
+        z-index: 9;
+
+    }
+
+
+
+    @media only screen and (max-width: 500px) {
         .editor {
-
             font-size: 12px !important;
-    
-            position: absolute;
-            width: 100% !important;
-            height: 93% !important;
-            top: 0 !important;
-            left: 0;
-    
-            box-sizing: border-box;
-            border-left: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            border-top: 1px solid var(--border-color);
-    
-            z-index: 9;
-    
         }
     }
+
+    @media only screen and (max-height: 500px) {
+        .editor {
+            height: 88% !important;
+        }
+    }
+
 
 
     .line1 {
@@ -755,44 +756,43 @@ body {
         z-index: 9;
     }
 
-    @media only screen and (max-width: 1000px){
-        .stdin_area {
-
-            /* font-size: 12px !important; */
-    
-            position: absolute;
-            width: 100% !important;
-            height: 93% !important;
-            bottom: 7% !important;
-            left: 0;
-            /* background-color: burlywood; */
-    
-            box-sizing: border-box;
-            border: 1px solid var(--border-color);
-    
-            z-index: 8;
+    @media only screen and (max-height: 500px) {
+        .options_menu {
+            height: 12% !important;
+            top: 88% !important;
         }
     }
+    .stdin_area {
 
-    @media only screen and (max-width: 500px){
+        /* font-size: 12px !important; */
+
+        position: absolute;
+        width: 100% !important;
+        height: 93% !important;
+        bottom: 7% !important;
+        left: 0;
+        /* background-color: burlywood; */
+
+        box-sizing: border-box;
+        border: 1px solid var(--border-color);
+
+        z-index: 8;
+    }
+
+
+    @media only screen and (max-width: 500px) {
         .stdin_area {
-
             font-size: 12px !important;
-    
-            position: absolute;
-            width: 100% !important;
-            height: 93% !important;
-            bottom: 7% !important;
-            left: 0;
-            /* background-color: burlywood; */
-    
-            box-sizing: border-box;
-            border: 1px solid var(--border-color);
-    
-            z-index: 8;
         }
     }
-    
+
+    @media only screen and (max-height: 500px) {
+        .stdin_area {
+            height: 88% !important;
+            bottom: 12% !important;
+        }
+    }
+
 
     .stdout_area {
 
@@ -804,6 +804,12 @@ body {
         /* background-color: rgb(160, 97, 15); */
 
         z-index: 8;
+    }
+
+    @media only screen and (max-height: 500px) {
+        .stdout_area {
+            height: 88% !important;
+        }
     }
 
 
@@ -932,57 +938,49 @@ body {
 
     }
 
-    @media only screen and (max-width: 500px){
+    @media only screen and (max-height: 500px) {
+        .right_topbar {
+            height: 11% !important;
+        }
+    }
+
+
+    .output {
+        background-color: var(--dracula);
+        color: var(--text-primary);
+
+        /* font-size: 12px !important; */
+
+        height: 87%;
+        width: 100%;
+
+        outline: none;
+
+
+        box-sizing: border-box;
+        border-bottom: 1px solid var(--border-color);
+        border-left: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+
+        padding: 10px;
+        overflow: auto;
+
+        /* for tab and newline */
+        white-space: pre-wrap;
+    }
+
+    @media only screen and (max-width: 500px) {
         .output {
-            background-color: var(--dracula);
-            color: var(--text-primary);
-    
             font-size: 12px !important;
-    
-            height: 87%;
-            width: 100%;
-    
-            outline: none;
-    
-    
-            box-sizing: border-box;
-            border-bottom: 1px solid var(--border-color);
-            border-left: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-    
-            padding: 10px;
-            overflow: auto;
-    
-            /* for tab and newline */
-            white-space: pre-wrap;
         }
     }
-    @media only screen and (max-width: 1000px){
+
+    @media only screen and (max-height: 500px) {
         .output {
-            background-color: var(--dracula);
-            color: var(--text-primary);
-    
-            /* font-size: 12px !important; */
-    
-            height: 87%;
-            width: 100%;
-    
-            outline: none;
-    
-    
-            box-sizing: border-box;
-            border-bottom: 1px solid var(--border-color);
-            border-left: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-    
-            padding: 10px;
-            overflow: auto;
-    
-            /* for tab and newline */
-            white-space: pre-wrap;
+            height: 78% !important;
         }
     }
-   
+
 
     .right_bottombar {
         background-color: var(--dracula);
@@ -995,6 +993,11 @@ body {
 
     }
 
+    @media only screen and (max-height: 500px) {
+        .right_bottombar {
+            height: 11% !important;
+        }
+    }
 
 
 
@@ -1038,9 +1041,9 @@ body {
         justify-content: center;
 
         white-space: nowrap;
-        overflow-x:auto;
+        overflow-x: auto;
     }
-    
+
 
     .loader {
         border: 2px solid #f3f3f3;
