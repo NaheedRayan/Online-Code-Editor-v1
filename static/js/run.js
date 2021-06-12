@@ -18,7 +18,10 @@ function change_language(event) {
 
     language = event.target.value;
     // lang = event.target.value;
-    if (language == "cpp" | language == "c") {
+    if (language == "c") {
+        ed.getSession().setMode("ace/mode/c_cpp");
+        $(".filename1").html("code.c");
+    } else if (language == "cpp") {
         ed.getSession().setMode("ace/mode/c_cpp");
         $(".filename1").html("code.cpp");
     } else if (language == "python3") {
@@ -160,12 +163,12 @@ function output_link(data_link) {
             } else if (data.status == "Queued") {
                 $(".success").html(data.status);
                 $(".status").css("background-color", "rgb(139, 139, 139)"); //make the background grey
-                output_link(data_link)//recursive call
+                output_link(data_link) //recursive call
 
             } else if (data.status == "Processing") {
                 $(".success").html(data.status);
                 $(".status").css("background-color", "rgb(139, 139, 139)"); //make the background grey
-                output_link(data_link)//recursive call
+                output_link(data_link) //recursive call
 
             } else if (data.status == "Runtime Error") {
                 output.innerHTML = "Out of Memory";

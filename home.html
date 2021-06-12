@@ -44,9 +44,9 @@
                 <span class="hide_stdin">Hide stdin</span>
 
                 <select class="language" onchange="change_language(event)">
-                    <option value="" disabled selected hidden>Select Language</option>
-                    <option value="cpp">C++</option>
+                    <option value="">Select Language</option>
                     <option value="c">C</option>
+                    <option value="cpp">C++</option>
                     <option value="python3">Python3</option>
                     <option value="openJDK-8">Java-8</option>
                     <option value="javascript">JavaScript</option>
@@ -90,9 +90,12 @@
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
     </script> -->
 
-    <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/theme-dracula.js" type="text/javascript" charset="utf-8"></script>
-    <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8">
+    </script>
+    <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/theme-dracula.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ext-language_tools.js" type="text/javascript"
+        charset="utf-8"></script>
     <!-- <script src="js/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script> -->
     <!-- <script src="js/ace-builds/src-min-noconflict/theme-dracula.js" type="text/javascript" charset="utf-8"></script> -->
     <!-- <script src="js/ace-builds/src-min-noconflict/ext-language_tools.js" type="text/javascript" charset="utf-8"></script> -->
@@ -123,10 +126,9 @@
 
         document.getElementById('stdin_area').style.fontSize = '16px';
         $(".status").hide();
-    
     </script>
 
-    
+
 
     <!-- for resizing the divs -->
     <script src="js/line_resizer.js" type="text/javascript" charset="utf-8"></script>
