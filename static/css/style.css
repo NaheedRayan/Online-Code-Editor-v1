@@ -440,6 +440,10 @@ body {
     height: 5%;
     width: 100%;
     display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color:#cccccc;
+    font-weight: bold;
 
     box-sizing: border-box;
     border: 1px solid var(--border-color);
@@ -987,6 +991,11 @@ body {
         height: 5%;
         width: 100%;
         display: flex;
+        align-items: center;
+        padding-left: 10px;
+        color:#cccccc;
+        font-size:12px ;
+        font-weight: bold;
 
         box-sizing: border-box;
         border: 1px solid var(--border-color);

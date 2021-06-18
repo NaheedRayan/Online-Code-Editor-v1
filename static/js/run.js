@@ -58,6 +58,7 @@ document.querySelector(".run_button").addEventListener("click", (e) => {
     $(".status").show();
     $(".status").css("background-color", "rgb(139, 139, 139)")
     $(".success").html("");
+    $(".right_bottombar").html("");
 
     output.innerHTML = "";
 
@@ -93,6 +94,7 @@ document.querySelector(".run_button").addEventListener("click", (e) => {
     // "http://localhost:8080/submit"
 
 
+    // let server_link = "http://localhost:9090/submit" ;
     // let server_link = "http://localhost:8080/submit" ;
     // let server_link = "http://52.172.231.206:8080/submit";
     let server_link = "https://52.172.231.206:8080/submit";
@@ -151,6 +153,7 @@ function output_link(data_link) {
                 $(".success").html(data.status);
                 $(".loader").hide(); //hide the loader
                 $(".status").css("background-color", "rgb(119, 199, 0)"); //make the background green
+                $(".right_bottombar").html(data.time + " sec");
 
             } else if (data.status == "Failed" || data.status == "Invalid Request") {
                 console.log(data)
